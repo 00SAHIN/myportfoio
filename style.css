@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("hbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header section {
+    text-align: justify;
+    padding: 100px 20px;
+    /* Removed background-color */
+}
+
+h1 {
+    color: #d9952a;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: rgb(159 141 75 / 91%);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+}
+
+.nav {
+    
+    font-family: 'Titillium Web';
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-flex;
+    list-style: outside none none;
+    margin: .5em 1em;
+    padding: 0;
+}
+
+.nav a {
+    display: block;
+    color: rgba(235, 232, 104, 0.932);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    padding: .5em .8em;
+}
+
+.nav a::before,
+.nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.nav a::before {
+    right: 0;
+    top: 0;
+    border-top: 3px solid #3E8914;
+    border-right: 3px solid #2E640F;
+    transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #2E640F;
+    border-left: 3px solid #3E8914;
+    transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.nav a:hover {
+    color: #a6db12;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    display: none;
+    width: 80%;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #e6d114; /* Color for sections that are not visible */
+}
+
+.project a {
+    text-decoration: none;
+    color: #0074c3;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 600px) {
+    header section {
+        padding: 10px;
+    }
+
+    .nav a {
+        padding: 10px;
+    }
+
+    .section {
+        width: 90%;
+        padding: 10px;
+    }
+}
